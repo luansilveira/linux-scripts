@@ -14,15 +14,3 @@ sudo dnf install cmake cmake-gui
 
 # java
 sudo dnf install java-1.8.0-openjdk-devel
-
-# go cd
-echo "
-[gocd]
-name     = GoCD YUM Repository
-baseurl  = https://download.go.cd
-enabled  = 1
-gpgcheck = 1
-gpgkey   = https://download.go.cd/GOCD-GPG-KEY.asc
-" | sudo tee /etc/yum.repos.d/gocd.repo
-
-sudo dnf install go-server go-agent
